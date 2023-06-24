@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Celebrity recognition</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style.css') }}">
+    <script src="https://kit.fontawesome.com/aaebe175a5.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+    <div class="container">
+        <h1>Image Classifier</h1>
+    </div>
+
+    <div class="row">
+        <div class="column">
+            <img src="static/img/m.jpg">
+        </div>
+        <div class="column">
+            <img src="static/img/d.jpg">
+        </div>
+        <div class="column">
+            <img src="static/img/s.jpg">
+        </div>
+        <div class="column">
+            <img src="static/img/k.jpg">
+        </div>
+        <div class="column">
+            <img src="static/img/a.jpg">
+        </div>
+    </div>
+
+    <div class="description">
+
+        <p>This image classifier makes use of CNN (Convolutional Neural Network). A CNN is a specific type of neural
+            network architecture used in Deep Learning, and it is implemented using the Keras library.</p>
+        <p>Have fun testing this image classifier that classifies the images of popular Indian celebrities such
+            as - <span>Prime Minister Narendra Modi</span>, <span>MS Dhoni</span>,
+            <span>Shraddha Kapoor</span>, <span>Kiara Advani</span> and,
+            <span>Alia Bhatt</span>.</p>
+    </div>
+
+    <div class="user-input">
+        <form action = '/'  method="post" enctype="multipart/form-data">
+            <div class="btn-c">
+            <input class="btn" type="file" name = "imagefile" >
+            </div>
+            <div>
+            <input class="btn2" type="submit" value="Predict image">
+            </div>
+        </form>
+
+        <div id="result">
+            <strong>{{prediction_text}}</strong>
+
+        </div>
+
+    </div>
+
+     <div class="copyright">
+            <p>Copyright &copy; Kanishka Katiyar. Made with <i class="fa-sharp fa-solid fa-heart"></i></p>
+     </div>
+
+
+
+
+
+</body>
+
+
+
+
+</html>
